@@ -7,7 +7,7 @@ import { Perfil } from './src/screens/Perfil';
 export default function App() {
   return (
     <View>
-      <Perfil />
+      <Cadastro />
     </View>
   );
 }

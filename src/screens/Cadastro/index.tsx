@@ -13,27 +13,39 @@ export const Cadastro = () => {
                 <Text style={styles.titulo}>Cadastre-se</Text>
                 <View style={styles.view100}>
                     <Text style={styles.textinputemail}>Digite seu nome completo</Text>
-                    <TextInput style={styles.inputemail} />
+                    <TextInput selectionColor={'#0E3B43'} style={styles.inputemail} />
                 </View>
                 <View style={styles.view100}>
-                    <Text style={styles.textinputemail}>Digite seu nome de usuário</Text>
-                    <TextInput style={styles.inputemail} />
+                    <Text style={styles.textinputemail}>Digite seu usuario</Text>
+                    <TextInput selectionColor={'#0E3B43'} style={styles.inputemail} />
+                </View>
+                <View style={styles.view100}>
+                    <Text style={styles.textinputemail}>Digite seu cpf</Text>
+                    <TextInput selectionColor={'#0E3B43'} style={styles.inputemail} />
+                </View>
+                <View style={styles.view100}>
+                    <Text style={styles.textinputemail}>Digite seu email</Text>
+                    <TextInput selectionColor={'#0E3B43'} style={styles.inputemail} />
                 </View>
                 <View style={styles.view100}>
                     <Text style={styles.textinputemail}>Digite sua senha</Text>
-                    <TextInput style={styles.inputemail} />
+                    <TextInput secureTextEntry={true} selectionColor={'#0E3B43'} style={styles.inputemail} />
+                </View>
+                <View style={styles.view100}>
+                    <Text style={styles.textinputemail}>Digite sua data de nascimento</Text>
+                    <TextInput selectionColor={'#0E3B43'} style={styles.inputemail} />
                 </View>
                 <View style={styles.view100}>
                     <Text style={styles.textinputemail}>Digite seu endereço</Text>
-                    <TextInput style={styles.inputemail} />
+                    <TextInput selectionColor={'#0E3B43'} style={styles.inputemail} />
                     <View style={{flexDirection:'row'}}>
                     <View style={styles.view40}>
                     <Text style={styles.textinputemail}>Número</Text>
-                    <TextInput style={styles.inputemail} />
+                    <TextInput selectionColor={'#0E3B43'} style={styles.inputemail} />
                 </View>
                 <View style={styles.view40}>
                     <Text style={styles.textinputemail}>Complemento</Text>
-                    <TextInput style={styles.inputemail} />
+                    <TextInput selectionColor={'#0E3B43'} style={styles.inputemail} />
                     </View>
                 </View>
                 <TouchableOpacity style={styles.signinbutton}><Text style={{color:'white', fontSize:20}}>Cadastrar</Text></TouchableOpacity>
