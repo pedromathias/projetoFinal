@@ -3,19 +3,20 @@ import { View, Text, FlatList, ActivityIndicator, StatusBar } from 'react-native
 import { getProdutos, listaProdutos } from "../../services/api";
 // import { ModalStatus } from "../../components/Modais/ModalStatus";
 import { styles } from "./styles";
+import { ProdutoCard } from "../../components/ProdutoCard";
 
 export const Home = () => {
 
     const [carregando, setCarregando] = useState<boolean>(false);
     const [listaProdutos, setListaProdutos] = useState<listaProdutos[]>([]);
 
-    const [idSelecionado, setIdSelecionado] = useState<string>("")
+    const [idSelecionado, setIdSelecionado] = useState<number>(0)
     const [modal, setModal] = useState<boolean>(false);
 
     function requisicaoListaProdutos() {
         setCarregando(true);
         getProdutos().then((res) => {
-            setListaProdutos(res.data.results)
+            setListaProdutos(res.data)
         }).catch((err) => {
             console.log(err)
         }).finally(() => {
@@ -30,6 +31,9 @@ export const Home = () => {
     return (
 
         <View style={styles.container} >
+            <Text style={styles.title}>
+                LOLJA
+            </Text>
             
              {carregando ?
                 <ActivityIndicator
@@ -42,8 +46,8 @@ export const Home = () => {
                     renderItem={({ item }) => {
                         return (
                             <ProdutoCard
-                                equipamento={item}
-                                setIndexSelecionado={setIdSelecionado}
+                                produto={item}
+                                setIdSelecionado={setIdSelecionado}
                                 setModal={setModal}
                             />
                         )
@@ -51,13 +55,13 @@ export const Home = () => {
                     }
                 />
             }
-            {modal &&
+            {/* {modal &&
                 <ModalStatus
                     index={idSelecionado}
                     modal={modal}
                     setModal={setModal}
                 />
-            }
+            } */}
             
         </View>
     )
