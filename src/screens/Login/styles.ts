@@ -76,7 +76,7 @@ bottomtext2:{
 eyevisible:{
     position:'absolute',
     right:60,
-    top:395,
+    top:393,
     zIndex:10
 }
 })
