@@ -7,7 +7,8 @@ import { Perfil } from './src/screens/Perfil';
 export default function App() {
   return (
     <View>
-      <Cadastro />
+      <StatusBar style={'light'} />
+      <Perfil />
     </View>
   );
 }

@@ -66,6 +66,17 @@ export const styles = StyleSheet.create({
 
     iconbutton:{
         marginRight:20
+    },
+
+    deletebutton:{
+        width:150,
+        backgroundColor:'red',
+        alignItems:'center',
+        justifyContent:'center',
+        height:30,
+        borderRadius:7,
+        marginTop:90
+
     }
 
 })
