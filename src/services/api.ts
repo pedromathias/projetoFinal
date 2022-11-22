@@ -5,10 +5,11 @@ const apiBulinha = axios.create({
 });
 
 export interface listaProdutos {
-    index: string,
-    name: string,
-    url: string,
-    preco?: number
+    id: number,
+    nome: string,
+    fotoLink: string,
+    valor?: number,
+    url: string
 }
 
 interface getProdutosRespostaProps {
@@ -18,6 +19,22 @@ interface getProdutosRespostaProps {
 
 export function getProdutos(): Promise<AxiosResponse<getProdutosRespostaProps, any>> {
     let url = `produto/`;
+
+    return apiBulinha.get(url);
+}
+
+
+export interface produtoStatusProps {
+    id: number,
+    nome: string,
+    nomeCategoria: string,
+    descricao: string,
+    fotoLink: string;
+    url: string;
+}
+
+export function getEquipementoEspecifico(id: number ): Promise<AxiosResponse<produtoStatusProps | any>> {
+    let url = `produto/${id}`
 
     return apiBulinha.get(url);
 }
