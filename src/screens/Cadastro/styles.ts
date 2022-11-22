@@ -11,24 +11,24 @@ export const styles = StyleSheet.create({
 
     },
 
-    arrowback:{
+    arrowback: {
 
-        position:'absolute',
-        top:50,
-        left:10
+        position: 'absolute',
+        top: 50,
+        left: 10
 
     },
 
     titulo: {
         fontSize: 40,
         marginTop: 130,
-        marginBottom:30,
+        marginBottom: 30,
         color: 'white'
     },
 
     inputemail: {
         backgroundColor: '#868686',
-        width:'100%',
+        width: '100%',
         height: 50,
         borderRadius: 10,
         color: 'white',
@@ -36,38 +36,37 @@ export const styles = StyleSheet.create({
         marginBottom: 15
     },
 
-    textinputemail:{
-        marginBottom:5,
-        fontSize:16
+    textinputemail: {
+        marginBottom: 5,
+        fontSize: 16
     },
 
-    view100:{
-        width:'90%',
-        
+    view100: {
+        width: '90%',
+
     },
 
-    view40:{
-        width:'45%',
-        marginRight:25
+    view40: {
+        width: '45%',
+        marginRight: 25
     },
 
-    signinbutton:{
-        backgroundColor:'#4B5D6D',
-        width:'100%',
+    signinbutton: {
+        backgroundColor: '#4B5D6D',
+        width: '100%',
         height: 50,
         borderRadius: 10,
         color: 'white',
         paddingLeft: 15,
         marginBottom: 15,
-        marginTop:30,
-        justifyContent:'center',
-        alignItems:'center'
+        marginTop: 30,
+        justifyContent: 'center',
+        alignItems: 'center'
     },
 
-    addusericon:{
-        position:'absolute',
-        bottom:30,
-        left:20
+    addusericon: {
+        position: 'absolute',
+        bottom: 27,
+        left: 20
     }
-
 })
