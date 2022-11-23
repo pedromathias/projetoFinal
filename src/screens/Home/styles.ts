@@ -12,7 +12,8 @@ title: {
     color: '#fff',
     fontSize: 50,
     fontWeight: 'bold',
-    textAlign: 'center'
+    textAlign: 'center',
+    marginBottom: 20
 },
 input: {
     backgroundColor:'#1f1e25',
@@ -22,5 +23,10 @@ input: {
     marginTop: 30,
     borderRadius: 7
 },
+
+produtos:{
+    display: "flex",
+    
+}
 
 })
