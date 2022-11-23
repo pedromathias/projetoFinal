@@ -2,9 +2,6 @@ import react, {useState} from "react";
 import {TextInput, View, Text, TouchableOpacity} from 'react-native'
 import { styles } from "./styles";
 import { Entypo} from '@expo/vector-icons';
-import Link from "@react-navigation/native/lib/typescript/src/Link";
- 
-
 
 export const Login = () => {
 

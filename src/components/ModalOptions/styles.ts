@@ -2,28 +2,37 @@ import { StyleSheet } from 'react-native';
 
 export const styles = StyleSheet.create({
 
-    container: {
-
+    modalContentView: {
+        borderRadius: 30,
+        borderBottomLeftRadius: 0,
+        borderBottomRightRadius: 0,
         backgroundColor: '#0E3B43',
-        width: '100%',
+        paddingHorizontal: 14,
+        paddingVertical: 20,
         height: '100%',
-        alignItems: 'center'
+        marginTop: 'auto'
 
     },
 
-    arrowback: {
-
+    modalOverlay: {
         position: 'absolute',
-        top: 50,
-        left: 10
-
+        top: 0,
+        bottom: 0,
+        left: 0,
+        right: 0
     },
 
-    titulo: {
-        fontSize: 40,
-        marginTop: 130,
-        marginBottom: 30,
-        color: 'white'
+    firstLineModal: {
+
+        flexDirection: 'row',
+        marginBottom:50
+    },
+
+    textshare: {
+        paddingTop: 2,
+        color: 'white',
+        fontSize: 16,
+        marginLeft: 95
     },
 
     inputemail: {
@@ -53,7 +62,7 @@ export const styles = StyleSheet.create({
 
     signinbutton: {
         backgroundColor: '#4B5D6D',
-        width: '80%',
+        width: '100%',
         height: 50,
         borderRadius: 10,
         color: 'white',
@@ -62,11 +71,8 @@ export const styles = StyleSheet.create({
         marginTop: 30,
         justifyContent: 'center',
         alignItems: 'center'
-    },
-
-    addusericon: {
-        position: 'absolute',
-        bottom: 27,
-        left: 20
     }
+
+
+
 })
