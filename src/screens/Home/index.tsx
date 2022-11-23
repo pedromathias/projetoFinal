@@ -35,16 +35,19 @@ export const Home = () => {
                 LOLJA
             </Text>
             
+            <View style={styles.produtos}>
              {carregando ?
                 <ActivityIndicator
                     size={"large"}
                 />
                 :
-                <FlatList
+                <FlatList                
                     data={listaProdutos}
                     keyExtractor={item => String(item.id)}
+                    numColumns={2}
                     renderItem={({ item }) => {
                         return (
+
                             <ProdutoCard
                                 produto={item}
                                 setIdSelecionado={setIdSelecionado}
@@ -62,7 +65,7 @@ export const Home = () => {
                     setModal={setModal}
                 />
             } */}
-            
+            </View>
         </View>
     )
 

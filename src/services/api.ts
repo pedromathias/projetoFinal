@@ -1,7 +1,7 @@
 import axios, { AxiosResponse } from "axios";
 
 const apiBulinha = axios.create({
-    baseURL: 'https://d684-2804-d41-a7a1-cc00-51e6-7714-1b26-f254.sa.ngrok.io'
+    baseURL: 'https://b969-2804-d41-a7a1-cc00-51e6-7714-1b26-f254.sa.ngrok.io'
 });
 
 export interface listaProdutos {
