@@ -5,7 +5,7 @@ import { getProdutos, listaProdutos } from "../../services/api";
 import { styles } from "./styles";
 import { ProdutoCard } from "../../components/ProdutoCard";
 
-export const Home = () => {
+export const Home = ({navigation}) => {
 
     const [carregando, setCarregando] = useState<boolean>(false);
     const [listaProdutos, setListaProdutos] = useState<listaProdutos[]>([]);
@@ -48,6 +48,7 @@ export const Home = () => {
                     renderItem={({ item }) => {
                         return (                            
                            <ProdutoCard
+                                onPress={navigation.navigate("Produto")}
                                 produto={item}
                                 setIdSelecionado={setIdSelecionado}
                                 setModal={setModal}
