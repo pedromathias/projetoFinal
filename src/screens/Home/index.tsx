@@ -46,13 +46,12 @@ export const Home = () => {
                     keyExtractor={item => String(item.id)}
                     numColumns={2}
                     renderItem={({ item }) => {
-                        return (
-
-                            <ProdutoCard
+                        return (                            
+                           <ProdutoCard
                                 produto={item}
                                 setIdSelecionado={setIdSelecionado}
                                 setModal={setModal}
-                            />
+                            />                            
                         )
                     }
                     }

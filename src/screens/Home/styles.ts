@@ -25,7 +25,8 @@ input: {
 },
 
 produtos:{
-    display: "flex",
+    paddingBottom: 100
+    
     
 }
 
