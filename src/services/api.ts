@@ -18,14 +18,11 @@ export interface listaProdutos {
           valor?: number
 }
 
-
-
 export function getProdutos(): Promise<AxiosResponse<listaProdutos[], any>> {
     let url = `produto/`;
 
     return apiBulinha.get(url);
 }
-
 
 export interface produtoStatusProps {
     id: number,
@@ -36,7 +33,7 @@ export interface produtoStatusProps {
     url: string;
 }
 
-export function getEquipementoEspecifico(id: number ): Promise<AxiosResponse<produtoStatusProps | any>> {
+export function getProdutoEspecifico(id: number ): Promise<AxiosResponse<produtoStatusProps | any>> {
     let url = `produto/${id}`
 
     return apiBulinha.get(url);
