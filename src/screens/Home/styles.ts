@@ -1,20 +1,32 @@
 import { StyleSheet, Platform } from "react-native";
 
 export const styles = StyleSheet.create({
-    container: {
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        height: 10
-    },
+container: {
+    flex: 1,
+    backgroundColor: "#0E3B43",
+    paddingTop: 45,
+    paddingHorizontal: 30
+},
 
-    listaProduto:{
-        marginTop: 150
-    listStyle: "none",
-    display: "grid",
-  /* aqui ta deixando responsivo com o minmax */
-  gridTemplateColumns: repeat(5, minmax(100px, 1fr)),
-  columnGap: 3,
-  rowGap: 4,
-    },
-  });
+title: {
+    color: '#fff',
+    fontSize: 50,
+    fontWeight: 'bold',
+    textAlign: 'center',
+    marginBottom: 20
+},
+input: {
+    backgroundColor:'#1f1e25',
+    color: '#fff',
+    fontSize: 18,
+    padding: Platform.OS === 'ios' ? 15 : 10,
+    marginTop: 30,
+    borderRadius: 7
+},
+
+produtos:{
+    display: "flex",
+    
+}
+
+})

@@ -1,8 +1,9 @@
-import react, { useEffect, useState } from "react";
-import { TextInput, View, Text, TouchableOpacity, ScrollView, AppRegistry } from 'react-native'
-import { TextInputMask } from 'react-native-masked-text';
+import React, { useState } from "react";
+import { TextInput, View, Text, TouchableOpacity, ScrollView } from 'react-native'
 import { styles } from "./styles";
 import { AntDesign, Ionicons } from '@expo/vector-icons';
+import { Botao } from "../../components/Botao";
+import { TextInputMask} from 'react-native-masked-text';
 
 import axios from "axios";
 import { InsereCliente, postApiBulinha, postClientes } from "../../services/apiCliente/api";
