@@ -2,8 +2,6 @@ import react, {useState} from "react";
 import {TextInput, View, Text, TouchableOpacity} from 'react-native'
 import { styles } from "./styles";
 import { Entypo} from '@expo/vector-icons';
- 
-
 
 export const Login = () => {
 
