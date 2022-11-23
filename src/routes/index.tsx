@@ -88,7 +88,7 @@ function Comprar() {
 
 const TabNavigator = () => {
   
-    const verificar = false;
+    const verificar = true;
 
   return (
     <Tab.Navigator
