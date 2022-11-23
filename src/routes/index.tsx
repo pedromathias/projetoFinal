@@ -10,6 +10,7 @@ import { Login } from "../screens/Login";
 import { Entypo } from "@expo/vector-icons";
 import { FontAwesome5 } from "@expo/vector-icons";
 import { Cadastro } from "../screens/Cadastro";
+import { Produto } from "../screens/Produto";
 
 const Tab = createBottomTabNavigator<RootTabParamList>();
 const Stack = createNativeStackNavigator<RootTabParamList>();
@@ -20,12 +21,25 @@ export type RootTabParamList = {
   Carrinho: undefined;
   Login: undefined;
   Cadastro: undefined;
+  Entrar: undefined;
+  Produto: undefined;
+  Inicio: undefined;
 };
+
+function Produtos() {
+  return (
+    <Stack.Navigator>
+      <Stack.Screen name= "Home" component={Home} options={{ headerShown: false }}/>
+      <Stack.Screen name= "Produto" component={Produto} options={{ headerShown: false }}/>
+    </Stack.Navigator>
+  );
+}
+
 function Inicio() {
   return (
     <Tab.Screen
-        name="Home"
-        component={Home}
+        name="Inicio"
+        component={Produtos}
         options={{
           tabBarIcon: ({ color }) => {
             return <Entypo name="home" size={24} color={color} />;
@@ -61,7 +75,7 @@ function TelaLogin() {
 function Entrar() {
   return (
     <Tab.Screen
-      name="Login"
+      name="Entrar"
       component={TelaLogin}
       options={{
         tabBarIcon: ({ color }) => {
@@ -88,7 +102,7 @@ function Comprar() {
 
 const TabNavigator = () => {
   
-    const verificar = true;
+    const verificar = false;
 
   return (
     <Tab.Navigator
@@ -113,13 +127,5 @@ export function Routes() {
     <NavigationContainer>
       <TabNavigator />
     </NavigationContainer>
-  );
-}
-
-function MyStack() {
-  return (
-    <Stack.Navigator>
-      <Stack.Screen name="Cadastro" component={Cadastro} />
-    </Stack.Navigator>
   );
 }

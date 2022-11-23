@@ -31,7 +31,7 @@ export const Produto = () => {
     <View style={styles.container}>
         <Text style={styles.titulo}>LOLJA</Text>
         <View style={styles.content}>
-            {carregando ? <ActivityIndicator/> : <Text> {produto.nome}</Text>}
+            {carregando ? <ActivityIndicator/> : <Text> produto.nome </Text>}
         </View>
     </View>
 )

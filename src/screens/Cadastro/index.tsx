@@ -10,7 +10,7 @@ import { InsereCliente, postApiBulinha, postClientes } from "../../services/apiC
 import { isBinaryExpression } from "typescript";
 import { useFocusEffect } from "@react-navigation/native";
 
-export const Cadastro = () => {
+export const Cadastro = ({navigation}) => {
 
     const [nome, setNome] = useState(null);
     const [usuario, setUsuario] = useState(null);
@@ -66,7 +66,7 @@ export const Cadastro = () => {
     return (
         <View style={styles.container}>
             <ScrollView style={{marginBottom:50}}>
-                <Ionicons style={styles.arrowback} name="arrow-back" size={35} color="white" />
+                <Ionicons onPress={navigation.goBack}  style={styles.arrowback} name="arrow-back" size={35} color="white" />
                     <View style={{alignItems:'center', width:'100%'}}>
                         <Text style={styles.titulo}>Cadastre-se</Text>
 
