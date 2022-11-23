@@ -3,7 +3,6 @@ import { StyleSheet } from "react-native";
 export const styles = StyleSheet.create({
     buttonProdutoItem: {
         backgroundColor: '#1f1e25',
-        padding: 15,
         borderRadius: 10,
         alignItems: 'center',
         marginVertical: 5,
@@ -19,6 +18,8 @@ export const styles = StyleSheet.create({
         color: '#FFF',
         fontSize: 17,
         width: "80%",
+        padding: 15,
+        marginTop: -15
         
     },
     textPrecoItem: {
@@ -26,6 +27,8 @@ export const styles = StyleSheet.create({
         color: '#FFF',
         fontSize: 22,
         width: "80%",
+        padding: 15,
+        marginTop: -15
         
     },
     closeIcon: {
@@ -34,8 +37,10 @@ export const styles = StyleSheet.create({
         width: 25
     },
     image:{
-        width: 80,
-        height: 100
+        marginTop: 30,
+        width: 100,
+        height: 120,
+        marginBottom:10
     }
 
 })
