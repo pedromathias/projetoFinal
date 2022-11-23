@@ -6,7 +6,6 @@ const apiBulinha = axios.create({
 
 export interface listaProdutos {
     
-         dataFabricacao: Date,
           descricao: string,
           fotoLink: string,
           id: number,
@@ -16,7 +15,7 @@ export interface listaProdutos {
           nomeCategoria: string,
           nomeFuncionario: string,
           qtdEstoque: number,
-          valor: number
+          valor?: number
 }
 
 

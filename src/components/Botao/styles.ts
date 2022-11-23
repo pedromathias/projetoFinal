@@ -17,7 +17,17 @@ export const styles = StyleSheet.create({
 
     addusericon: {
         position: 'absolute',
-        bottom: 30,
+        bottom: 27,
         left: 20
-    }
+    },
+
+    loginbutton:{
+        backgroundColor:'#868686',
+        width:100,
+        height:50,
+        borderRadius:10,
+        alignItems:'center',
+        justifyContent:'center'
+        
+    },
 })
