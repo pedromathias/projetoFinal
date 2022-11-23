@@ -37,6 +37,7 @@ export const styles = StyleSheet.create({
     },
 
     textinputemail: {
+        color: "#fff",
         marginBottom: 5,
         fontSize: 16
     },
