@@ -53,11 +53,7 @@ loginbuttontext:{
 },
 
 line:{
-    height:0.3,
-    width:'100%',
-    backgroundColor:'white',
-    marginTop:280,
-    marginBottom:30
+    marginBottom:100
 },
 
 bottomview:{
@@ -65,12 +61,14 @@ flexDirection:'row'
 },
 
 bottomtext:{
-    color:'white'
+    color:'white',
+    fontSize: 20
 },
 
 bottomtext2:{
-    color:'white',
-    textDecorationLine:'underline'
+    color:'blue',
+    textDecorationLine:'underline',
+    fontSize: 20
 },
 
 eyevisible:{
