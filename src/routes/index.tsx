@@ -49,11 +49,20 @@ function Logado() {
   );
 }
 
+function TelaLogin() {
+  return (
+    <Stack.Navigator>
+      <Stack.Screen name= "Login" component={Login} options={{ headerShown: false }}/>
+      <Stack.Screen name= "Cadastro" component={Cadastro} options={{ headerShown: false }}/>
+    </Stack.Navigator>
+  );
+}
+
 function Entrar() {
   return (
     <Tab.Screen
       name="Login"
-      component={Login}
+      component={TelaLogin}
       options={{
         tabBarIcon: ({ color }) => {
           return <FontAwesome5 name="user-alt" size={24} color={color} />;
