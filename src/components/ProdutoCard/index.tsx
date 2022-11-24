@@ -24,7 +24,7 @@ export const ProdutoCard = ({ produto, setModal,setPrecoSelecionado, setIdSeleci
         setIdSelecionado(produto.id);
         setPrecoSelecionado && setPrecoSelecionado(produto.valor)
         setModal(true);
-        navigation.navigate("Produto");
+        navigation.navigate("Produto", {produto});
     }
 
     return (
