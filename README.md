@@ -2,7 +2,7 @@
 
 ## 📃 Descrição do Projeto:
 
-FrontEnd desenvolvido na linguagem JavaScript com tipagem em TypeScript, conectado a uma API de um E-commerce feita na linguagem Java,  
+FrontEnd desenvolvido na linguagem JavaScript e TypeScript, conectado a uma API de um E-commerce feita na linguagem Java,  
 fazendo o uso de uma biblioteca em React Native. Tendo funcionalidades como cadastrar clientes, listar produtos.
 Foi feito também a criação de páginas com uma barra de navegação para poder se localizar melhor e ter uma melhor experiência em nosso app mobile. 
 
