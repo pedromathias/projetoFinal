@@ -5,7 +5,7 @@ import { getProdutoEspecifico, listaProdutos } from "../../services/api";
 import PicaPau from "../../assets/images/Pica-Pau.jpg"
 import { Botao } from "../../components/Botao";
 
-export const Produto = () => {
+export const Produto = ({route}) => {
   const [carregando, setCarregando] = useState<boolean>(true);
   const [produto, setProduto] = useState<listaProdutos>();
 
@@ -15,7 +15,7 @@ export const Produto = () => {
 
   function requisicaoProduto() {
     setCarregando(true);
-    getProdutoEspecifico(3)
+    getProdutoEspecifico(route.params?.produto.id)
       .then((res) => {
         console.log(res.data);
         setProduto(res.data);
