@@ -2,12 +2,18 @@ import react, {useState} from "react";
 import {TextInput, View, Text, TouchableOpacity} from 'react-native'
 import { styles } from "./styles";
 import { Entypo} from '@expo/vector-icons';
+import { NavigationContainer } from "@react-navigation/native";
 
-export const Login = () => {
 
+
+export const Login = ({navigation}) => {
+    
     const [input, setInput] = useState('');
     const [hidePass, setHidePass] = useState(true)
-
+    
+    const Cadastrar= () => {
+        navigation.navigate("Cadastro");
+    }
     return(
 
         <View style={styles.container}>
@@ -25,7 +31,7 @@ export const Login = () => {
             <TouchableOpacity style={styles.loginbutton}><Text style={styles.loginbuttontext}>Entrar</Text></TouchableOpacity>
             <View style={styles.line} />
             <View style={styles.bottomview}>
-            <Text style={styles.bottomtext}>Você já é um cliente ?  </Text><TouchableOpacity><Text style={styles.bottomtext2}>Cadastre-se</Text></TouchableOpacity>
+            <Text style={styles.bottomtext}>Você já é um cliente ?  </Text><TouchableOpacity onPress={()=> Cadastrar()}><Text style={styles.bottomtext2}>Cadastre-se</Text></TouchableOpacity>
             </View>
           </View>
     )

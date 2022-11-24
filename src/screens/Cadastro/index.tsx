@@ -9,8 +9,11 @@ import axios from "axios";
 import { InsereCliente, postApiBulinha, postClientes } from "../../services/apiCliente/api";
 import { isBinaryExpression } from "typescript";
 import { useFocusEffect } from "@react-navigation/native";
+import { ModalSignIn } from "../../components/ModalSignIn/ModalConfirm";
 
-export const Cadastro = () => {
+export const Cadastro = ({navigation}) => {
+
+    const [isSelectedModalSignIn, setIsSelectedModalSignIn] = useState(false);
 
     const [nome, setNome] = useState(null);
     const [usuario, setUsuario] = useState(null);
@@ -66,7 +69,7 @@ export const Cadastro = () => {
     return (
         <View style={styles.container}>
             <ScrollView style={{marginBottom:50}}>
-                <Ionicons style={styles.arrowback} name="arrow-back" size={35} color="white" />
+                <Ionicons onPress={navigation.goBack}  style={styles.arrowback} name="arrow-back" size={35} color="white" />
                     <View style={{alignItems:'center', width:'100%'}}>
                         <Text style={styles.titulo}>Cadastre-se</Text>
 
@@ -236,7 +239,7 @@ export const Cadastro = () => {
                             </View>
                             
 
-                            <TouchableOpacity onPress={() => salvar()} style={styles.signinbutton}  >
+                            <TouchableOpacity onPress={() => {salvar(),setIsSelectedModalSignIn(true)}} style={styles.signinbutton}  >
                                 <Text style={{color:'white', fontSize:20}}>
                                     Cadastrar
                                 </Text>
@@ -245,6 +248,7 @@ export const Cadastro = () => {
                         </View>
                     </View>
             </ScrollView>
+            <ModalSignIn isSelectedModalSignIn={isSelectedModalSignIn} setIsSelectedModalSignIn={setIsSelectedModalSignIn}  />
         </View>
     )
 }   
