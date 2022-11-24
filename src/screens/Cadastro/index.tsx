@@ -22,6 +22,7 @@ import {
 import { isBinaryExpression } from "typescript";
 import { useFocusEffect } from "@react-navigation/native";
 import { ModalSignIn } from "../../components/ModalSignIn/ModalConfirm";
+import { Header } from "../../components/HeaderBack";
 
 export const Cadastro = ({ navigation }) => {
   const [isSelectedModalSignIn, setIsSelectedModalSignIn] = useState(false);
@@ -81,16 +82,7 @@ export const Cadastro = ({ navigation }) => {
 
   return (
     <View style={styles.container}>
-      <View style={{width:"100%", height:90, backgroundColor: "#0e3b43"}}>
-      <Ionicons
-        onPress={navigation.goBack}
-        style={styles.arrowback}
-        name="arrow-back"
-        size={35}
-        color="white"
-      />
-      </View>
-
+      <Header props={navigation.goBack} />
       <ScrollView style={{ marginBottom: 50 }}>
         <View style={{ alignItems: "center", width: "100%" }}>
           <Text style={styles.titulo}>Cadastre-se</Text>

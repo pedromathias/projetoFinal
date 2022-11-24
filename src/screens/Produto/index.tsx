@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from "react";
-import { View, Text, ActivityIndicator, Image, TouchableOpacity } from "react-native";
+import { View, Text, ActivityIndicator, Image, TouchableOpacity, ScrollView } from "react-native";
 import { botao, styles } from "./styles";
 import { getProdutoEspecifico, listaProdutos } from "../../services/api";
 import PicaPau from "../../assets/images/Pica-Pau.jpg"
 import { Botao } from "../../components/Botao";
+import { Header } from "../../components/HeaderBack";
 
-export const Produto = ({route}) => {
+export const Produto = ({route, navigation}) => {
   const [carregando, setCarregando] = useState<boolean>(true);
   const [produto, setProduto] = useState<listaProdutos>();
 
@@ -30,7 +31,9 @@ export const Produto = ({route}) => {
 
   return (
     <View style={styles.container}>
+      <Header props={navigation.goBack} />
       <Text style={styles.titulo}>LOLJA</Text>
+      <ScrollView style={{width:'100%'}} showsVerticalScrollIndicator={false}>
       <View style={styles.content}>
         {carregando ? (
           <ActivityIndicator size={"large"} />
@@ -50,6 +53,7 @@ export const Produto = ({route}) => {
         <Botao title="Adicionar ao carrinho" /> 
         </View>
       </View>
+      </ScrollView>
     </View>
   );
 };

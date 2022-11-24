@@ -7,13 +7,12 @@ container: {
     backgroundColor: '#0E3B43',
     width: '100%',
     height: '100%',
-    alignItems: 'center'
+    alignItems: 'center',
 
 },
 
 titulo: {
 
-    marginTop: 50,
     fontSize: 42,
     color: 'white',
 
@@ -25,7 +24,8 @@ content: {
     height: '85%',
     width: '90%',
     borderRadius: 15,
-    alignItems: 'center'
+    alignItems: 'center',
+    marginHorizontal:20
 },
 
 title:{
@@ -34,11 +34,12 @@ title:{
 },
 descricao:{
     fontSize:24,
-    marginTop: 20
+    marginTop: 20,
+    marginBottom:50
 },
 preco:{
     fontSize: 30,
-    marginTop: 100
+    marginBottom:20
 },
 img:{
     width: 320,
