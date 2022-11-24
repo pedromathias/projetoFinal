@@ -59,13 +59,6 @@ export const Home = ({navigation}) => {
                     }
                 />
             }
-            {/* {modal &&
-                <ModalStatus
-                    index={idSelecionado}
-                    modal={modal}
-                    setModal={setModal}
-                />
-            } */}
             </View>
         </View>
     )
