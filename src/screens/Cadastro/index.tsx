@@ -95,8 +95,8 @@ export const Cadastro = () => {
 
                         <View style={styles.view100}>
                             <Text style={styles.textinputemail}>Digite seu cpf</Text>
-                            <TextInputMask 
-                             type="cpf"
+                            <TextInput 
+                            //  type="cpf"
                              selectionColor={'#0E3B43'}
                              style={styles.inputemail}
                              value={cpf}
@@ -106,7 +106,7 @@ export const Cadastro = () => {
                             }}
                             keyboardType="number-pad"
                             returnKeyType="done"      
-                            ref={(ref) => cpfField = ref}
+                            // ref={(ref) => cpfField = ref}
                              />
                         </View>
 
