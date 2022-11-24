@@ -8,7 +8,7 @@ export const styles = StyleSheet.create({
         height: '100%',
         alignItems: 'center',
         paddingHorizontal: 35,
-        paddingTop: 60
+
     },
 
     title: {

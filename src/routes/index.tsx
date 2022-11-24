@@ -28,6 +28,7 @@ export type RootTabParamList = {
   Produto: undefined;
   Inicio: undefined;
   Pedidos: undefined;
+  User: undefined;
 };
 
 function Produtos() {
@@ -65,8 +66,8 @@ function TelaPerfil() {
 function Logado() {
   return (
     <Tab.Screen
-      name="Perfil"
-      component={Perfil}
+      name="User"
+      component={TelaPerfil}
       options={{
         tabBarIcon: ({ color }) => {
           return <FontAwesome5 name="user-alt" size={24} color={color} />;
