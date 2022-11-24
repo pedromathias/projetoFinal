@@ -2,10 +2,11 @@ import React from "react";
 import { View, Modal, TouchableWithoutFeedback, Text, TouchableOpacity, ScrollView, TextInput } from "react-native";
 import { Feather, FontAwesome, AntDesign, EvilIcons, FontAwesome5, MaterialCommunityIcons, Entypo } from '@expo/vector-icons';
 import { styles } from "./styles";
+import { useAuth } from "../../Context/Auth";
 
 
-
-export const ModalConfirm = ({ isSelectedModalConfirm, setIsSelectedModalConfirm, text }) => {
+export const ModalConfirm = ({ isSelectedModalConfirm, setIsSelectedModalConfirm, text, }) => {
+   const {signOut} = useAuth();
 
    return (
 
@@ -26,7 +27,7 @@ export const ModalConfirm = ({ isSelectedModalConfirm, setIsSelectedModalConfirm
                <Text style={styles.textshare}>{text}</Text>
             </View>
             <View style={{flexDirection:'row', justifyContent:'space-evenly'}}>
-         <TouchableOpacity style={styles.confirmbuttonyes}><Text>Sim</Text></TouchableOpacity>
+         <TouchableOpacity style={styles.confirmbuttonyes} onPress={signOut} ><Text>Sim</Text></TouchableOpacity>
          <TouchableOpacity style={styles.confirmbuttonno} onPress={() => setIsSelectedModalConfirm(false)}><Text>Não</Text></TouchableOpacity>
             </View>
          </View>
