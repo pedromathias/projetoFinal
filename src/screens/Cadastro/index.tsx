@@ -9,8 +9,11 @@ import axios from "axios";
 import { InsereCliente, postApiBulinha, postClientes } from "../../services/apiCliente/api";
 import { isBinaryExpression } from "typescript";
 import { useFocusEffect } from "@react-navigation/native";
+import { ModalSignIn } from "../../components/ModalSignIn/ModalConfirm";
 
 export const Cadastro = ({navigation}) => {
+
+    const [isSelectedModalSignIn, setIsSelectedModalSignIn] = useState(false);
 
     const [nome, setNome] = useState(null);
     const [usuario, setUsuario] = useState(null);
@@ -236,7 +239,7 @@ export const Cadastro = ({navigation}) => {
                             </View>
                             
 
-                            <TouchableOpacity onPress={() => salvar()} style={styles.signinbutton}  >
+                            <TouchableOpacity onPress={() => {salvar(),setIsSelectedModalSignIn(true)}} style={styles.signinbutton}  >
                                 <Text style={{color:'white', fontSize:20}}>
                                     Cadastrar
                                 </Text>
@@ -245,6 +248,7 @@ export const Cadastro = ({navigation}) => {
                         </View>
                     </View>
             </ScrollView>
+            <ModalSignIn isSelectedModalSignIn={isSelectedModalSignIn} setIsSelectedModalSignIn={setIsSelectedModalSignIn}  />
         </View>
     )
 }   
