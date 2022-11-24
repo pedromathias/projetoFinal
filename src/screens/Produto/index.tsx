@@ -18,7 +18,6 @@ export const Produto = ({route, navigation}) => {
     setCarregando(true);
     getProdutoEspecifico(route.params?.produto.id)
       .then((res) => {
-        console.log(res.data);
         setProduto(res.data);
       })
       .catch((err) => {
