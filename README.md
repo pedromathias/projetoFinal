@@ -12,7 +12,7 @@ Foi feito também a criação de páginas com uma barra de navegação para pode
 
 Projeto realizado pelos alunos do (Serratec - 2022.2): 
 
--Lucas Martins, Pedro Mathias, Rafael Silva, Matheus Carius
+-Lucas Martins, Pedro Mathias, Rafael Silva, Matheus Carius, Lucas Fabrinio
 
 -----------------------------------------------------------------------------------------------------
 
