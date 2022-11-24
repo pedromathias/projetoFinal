@@ -42,7 +42,7 @@ preco:{
 },
 img:{
     width: 320,
-    heigh: 10
+    heigh: 320
 },
 image:{
     backgroundColor: "#111",

@@ -6,7 +6,7 @@ import PicaPau from "../../assets/images/Pica-Pau.jpg"
 import { Botao } from "../../components/Botao";
 
 export const Produto = () => {
-  const [carregando, setCarregando] = useState<boolean>(false);
+  const [carregando, setCarregando] = useState<boolean>(true);
   const [produto, setProduto] = useState<listaProdutos>();
 
   useEffect(() => {
@@ -15,7 +15,7 @@ export const Produto = () => {
 
   function requisicaoProduto() {
     setCarregando(true);
-    getProdutoEspecifico(2)
+    getProdutoEspecifico(3)
       .then((res) => {
         console.log(res.data);
         setProduto(res.data);
@@ -37,7 +37,7 @@ export const Produto = () => {
         ) : (
           <View>
             <View style={styles.image}>
-            <Image style={styles.img} resizeMode="contain"  source={PicaPau}/>
+            <Image style={styles.img}   source={{uri: produto.fotoLink}}/>
             </View>
             <Text style={styles.title}>{produto.nome}</Text>
             <Text style={styles.descricao}>{produto.descricao}</Text>
