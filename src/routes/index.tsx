@@ -2,7 +2,7 @@ import { NavigationContainer } from "@react-navigation/native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
-import { AuthContext } from "../Context/Auth";
+import { useAuth } from "../Context/Auth";
 import { Home } from "../screens/Home";
 import { Perfil } from "../screens/Perfil";
 import { Carrinho } from "../screens/Carrinho";
@@ -12,7 +12,7 @@ import { Entypo } from "@expo/vector-icons";
 import { FontAwesome5 } from "@expo/vector-icons";
 import { Cadastro } from "../screens/Cadastro";
 import { Produto } from "../screens/Produto";
-import { useContext } from "react";
+import { View, Text } from "react-native";
 
 const Tab = createBottomTabNavigator<RootTabParamList>();
 const Stack = createNativeStackNavigator<RootTabParamList>();
@@ -104,7 +104,15 @@ function Comprar() {
 
 const TabNavigator = () => {
   
-  const authContext = useContext(AuthContext);
+  const {authData, isLoading} = useAuth();
+
+  if (isLoading) {
+    return (
+      <View style={{flex: 1, justifyContent: "center", alignItems: "center"}}>
+        <Text>Loading...</Text>
+      </View>
+    )
+  }
 
   return (
     <Tab.Navigator
@@ -117,7 +125,7 @@ const TabNavigator = () => {
       }}
     >
         {Inicio()}
-        {authContext.authData ? Logado() : Entrar()}
+        {authData ? Logado() : Entrar()}
         {Comprar()}
 
     </Tab.Navigator>
