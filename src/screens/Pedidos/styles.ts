@@ -8,7 +8,7 @@ export const styles = StyleSheet.create({
         height: '100%',
         alignItems: 'center',
         paddingHorizontal: 35,
-
+        paddingBottom:85
     },
 
     title: {
@@ -29,7 +29,12 @@ export const styles = StyleSheet.create({
         height: '85%',
         width: '100%',
         borderRadius: 15,
-        alignItems:'center'
+        alignItems:'center',
+        borderBottomRightRadius:0,
+        borderBottomLeftRadius:0
     },
+
+    FlatList:{
+    }
     
 })
