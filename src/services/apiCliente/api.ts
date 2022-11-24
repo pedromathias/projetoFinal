@@ -1,26 +1,28 @@
 import axios, { AxiosResponse } from "axios";
 
 export const postApiBulinha = axios.create({
-    baseURL:'https://95c7-2804-d41-a7a1-cc00-e436-2c16-67a6-2210.sa.ngrok.io/'
+    baseURL:'https://7196-2804-d41-a72c-a900-5020-b4df-4701-a52f.sa.ngrok.io/'
 });
 
 export interface InsereCliente {
        
-    cpf: string,
-    dataNascimento: string,
-    email: string,
-    endereco: {
-      bairro: string,
-      cep: string,
-      cidade: string,
-      complemento: string,
-      estado: string,
-      numero: string,
-      rua: string
-    },
     id?: number,
     nome: string,
     usuario: string
+    cpf: string,
+    dataNascimento: Date,
+    email: string,
+    endereco: {
+      rua: string, 
+      numero: string,
+      complemento: string,
+      bairro: string,
+      cidade: string,
+      estado: string,
+      cep: string,
+     
+    },
+   
 
 }
 
@@ -31,4 +33,3 @@ export function postClientes(cliente: InsereCliente): Promise<AxiosResponse<Inse
 }
 
 
-// https://d625-2804-d41-a72c-a900-a42c-8a9f-8c9b-b13b.sa.ngrok.io

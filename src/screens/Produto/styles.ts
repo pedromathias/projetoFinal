@@ -7,13 +7,12 @@ container: {
     backgroundColor: '#0E3B43',
     width: '100%',
     height: '100%',
-    alignItems: 'center'
+    alignItems: 'center',
 
 },
 
 titulo: {
 
-    marginTop: 50,
     fontSize: 42,
     color: 'white',
 
@@ -25,29 +24,48 @@ content: {
     height: '85%',
     width: '90%',
     borderRadius: 15,
-    alignItems: 'center'
+    alignItems: 'center',
+    marginHorizontal:20
 },
 
 title:{
+    textAlign:'center',
     fontSize: 50,
     marginTop: 30
 },
 descricao:{
-    fontSize:24,
-    marginTop: 20
+    fontSize:20,
+    marginTop: 20,
+    marginBottom:50,
+    opacity:0.5,
+    textAlign:'center'
 },
 preco:{
     fontSize: 30,
-    marginTop: 100
+    marginBottom:50
 },
+
+categoria:{
+    fontSize: 20,
+    marginLeft:15,
+    marginBottom:20
+},
+
+quantidade:{
+    fontSize: 20,
+    marginLeft:15,
+    marginBottom:20
+},
+
 img:{
     width: 320,
-    heigh: 320
+    height: 320,
+    borderRadius:100,
 },
 image:{
-    backgroundColor: "#111",
     marginTop: 50,
-    height: 300
+    height: 300,
+    alignItems:'center'
     
 },
 botaoCarrinho:{
