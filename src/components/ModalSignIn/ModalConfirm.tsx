@@ -5,7 +5,11 @@ import { styles } from "./styles";
 
 
 
-export const ModalSignIn = ({ isSelectedModalSignIn, setIsSelectedModalSignIn}) => {
+export const ModalSignIn = ({ isSelectedModalSignIn, setIsSelectedModalSignIn,navigation }) => {
+
+   const Logar= () => {
+      setIsSelectedModalSignIn(false);
+  }
 
    return (
 
@@ -25,7 +29,7 @@ export const ModalSignIn = ({ isSelectedModalSignIn, setIsSelectedModalSignIn}) 
                <Text style={styles.textshare}>Conta criada com sucesso!</Text>
             </View>
             <View style={{flexDirection:'row', justifyContent:'space-evenly'}}>
-         <TouchableOpacity style={styles.confirmbutton} ><Text>Ok</Text></TouchableOpacity>
+         <TouchableOpacity onPress={()=> Logar()} style={styles.confirmbutton} ><Text>Ok</Text></TouchableOpacity>
             </View>
          </View>
       </Modal>
