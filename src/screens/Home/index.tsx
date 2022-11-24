@@ -5,7 +5,7 @@ import { getProdutos, listaProdutos } from "../../services/api";
 import { styles } from "./styles";
 import { ProdutoCard } from "../../components/ProdutoCard";
 
-export const Home = () => {
+export const Home = ({navigation}) => {
 
     const [carregando, setCarregando] = useState<boolean>(false);
     const [listaProdutos, setListaProdutos] = useState<listaProdutos[]>([]);
@@ -17,6 +17,7 @@ export const Home = () => {
         setCarregando(true);
         getProdutos().then((res) => {
             setListaProdutos(res.data)
+            
         }).catch((err) => {
             console.log(err)
         }).finally(() => {
@@ -43,16 +44,16 @@ export const Home = () => {
                 :
                 <FlatList                
                     data={listaProdutos}
-                    keyExtractor={item => String(item.id)}
+                    keyExtractor={item => item.id.toString()}
                     numColumns={2}
                     renderItem={({ item }) => {
-                        return (
-
-                            <ProdutoCard
+                        return (                            
+                           <ProdutoCard
+                           navigation={navigation}
                                 produto={item}
                                 setIdSelecionado={setIdSelecionado}
                                 setModal={setModal}
-                            />
+                            />                            
                         )
                     }
                     }

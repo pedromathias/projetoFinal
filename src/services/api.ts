@@ -1,7 +1,7 @@
 import axios, { AxiosResponse } from "axios";
 
 const apiBulinha = axios.create({
-    baseURL: 'https://b969-2804-d41-a7a1-cc00-51e6-7714-1b26-f254.sa.ngrok.io'
+    baseURL: ' https://88dd-2804-d41-a7a1-cc00-e436-2c16-67a6-2210.sa.ngrok.io'
 });
 
 export interface listaProdutos {
@@ -24,16 +24,8 @@ export function getProdutos(): Promise<AxiosResponse<listaProdutos[], any>> {
     return apiBulinha.get(url);
 }
 
-export interface produtoStatusProps {
-    id: number,
-    nome: string,
-    nomeCategoria: string,
-    descricao: string,
-    fotoLink: string;
-    url: string;
-}
 
-export function getProdutoEspecifico(id: number ): Promise<AxiosResponse<produtoStatusProps | any>> {
+export function getProdutoEspecifico(id: number ): Promise<AxiosResponse<listaProdutos | any>> {
     let url = `produto/${id}`
 
     return apiBulinha.get(url);
