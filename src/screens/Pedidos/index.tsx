@@ -3,8 +3,9 @@ import { View, Text, FlatList, ActivityIndicator, ViewComponent } from 'react-na
 import { getPedidos, listaPedidos } from "../../services/api";
 import { styles } from "./styles";
 import { PedidoCard } from "../../components/PedidoCard";
+import { Header } from "../../components/HeaderBack";
 
-export const Pedidos = () => {
+export const Pedidos = ({navigation}) => {
 
     const [carregando, setCarregando] = useState<boolean>(false);
     const [listaPedidos, setListaPedidos] = useState<listaPedidos[]>([]);
@@ -31,6 +32,7 @@ export const Pedidos = () => {
 
     return (
         <View style={styles.container}>
+            <Header props={navigation.goBack} />
             <Text style={styles.title}>LOLJA</Text>
             <Text style={styles.titleCarrinho}>Pedidos</Text>
             <View style={styles.content}>
