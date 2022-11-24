@@ -6,7 +6,11 @@ import { FontAwesome5, Ionicons, Feather  } from '@expo/vector-icons';
 import { ModalOptions } from '../../components/ModalOptions/ModalOptions';
 import { ModalConfirm } from '../../components/ModalConfirm/ModalConfirm';
 
-export const Perfil = () => {
+export const Perfil = ({navigation}) => {
+
+    const Pedido = () => {
+        navigation.navigate("Pedidos");
+      }
 
     const [isSelectedModal, setIsSelectedModal] = useState(false);
     const [isSelectedModalConfirm, setIsSelectedModalConfirm] = useState(false);

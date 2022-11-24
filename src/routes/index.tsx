@@ -13,6 +13,7 @@ import { FontAwesome5 } from "@expo/vector-icons";
 import { Cadastro } from "../screens/Cadastro";
 import { Produto } from "../screens/Produto";
 import { View, Text } from "react-native";
+import { Pedidos } from "../screens/Pedidos";
 
 const Tab = createBottomTabNavigator<RootTabParamList>();
 const Stack = createNativeStackNavigator<RootTabParamList>();
@@ -26,6 +27,7 @@ export type RootTabParamList = {
   Entrar: undefined;
   Produto: undefined;
   Inicio: undefined;
+  Pedidos: undefined;
 };
 
 function Produtos() {
@@ -48,6 +50,15 @@ function Inicio() {
           },
         }}
       />
+  );
+}
+
+function TelaPerfil() {
+  return (
+    <Stack.Navigator>
+      <Stack.Screen name= "Perfil" component={Perfil} options={{ headerShown: false }}/>
+      <Stack.Screen name= "Pedidos" component={Pedidos} options={{ headerShown: false }}/>
+    </Stack.Navigator>
   );
 }
 
