@@ -21,7 +21,7 @@ export const styles = StyleSheet.create({
 
     titulo: {
         fontSize: 40,
-        marginTop: 130,
+        marginTop: 5,
         marginBottom: 30,
         color: 'white'
     },
@@ -53,6 +53,7 @@ export const styles = StyleSheet.create({
     },
 
     signinbutton: {
+        flexDirection: "row",
         backgroundColor: '#4B5D6D',
         width: '80%',
         height: 50,
@@ -61,13 +62,56 @@ export const styles = StyleSheet.create({
         paddingLeft: 15,
         marginBottom: 15,
         marginTop: 30,
+        marginLeft: "auto",
+        marginRight: "auto",
         justifyContent: 'center',
         alignItems: 'center'
     },
 
     addusericon: {
+        right: 30,
+    },
+    modalContentView: {
+        borderRadius: 30,
+        borderWidth: 2,
+        borderColor: '#fff',
+        backgroundColor: '#1F2D39',
+        paddingHorizontal: 14,
+        paddingVertical: 20,
+        height: '20%',
+        marginTop: 'auto',
+        position:'absolute',
+        left: 20,
+        right: 20,
+        top:300
+
+    },
+
+    modalOverlay: {
         position: 'absolute',
-        bottom: 27,
-        left: 20
-    }
+        top: 0,
+        bottom: 0,
+        left: 0,
+        right: 0
+    },
+
+    firstLineModal: {
+
+        alignItems:'center',
+        marginBottom:20
+    },
+
+    textshare: {
+        paddingTop: 2,
+        color: 'white',
+        fontSize: 16
+    },
+    confirmbutton:{
+        width:100,
+        height:50,
+        backgroundColor:'#4B5D6D',
+        alignItems:'center',
+        justifyContent:'center',
+        borderRadius:7
+    },
 })
