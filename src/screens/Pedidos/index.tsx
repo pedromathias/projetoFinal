@@ -37,6 +37,7 @@ export const Pedidos = ({navigation}) => {
             <Text style={styles.titleCarrinho}>Pedidos</Text>
             <View style={styles.content}>
             <FlatList    
+                    style={styles.FlatList}
                     showsVerticalScrollIndicator={false}            
                     data={listaPedidos}
                     keyExtractor={item => item.id.toString()}
