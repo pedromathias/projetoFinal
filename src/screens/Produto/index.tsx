@@ -40,18 +40,26 @@ export const Produto = ({route, navigation}) => {
         ) : (
           <View>
             <View style={styles.image}>
-            <Image style={styles.img}   source={{uri: produto.fotoLink}}/>
+            <Image style={styles.img} source={{uri: produto.fotoLink,}}/>
             </View>
             <Text style={styles.title}>{produto.nome}</Text>
             <Text style={styles.descricao}>{produto.descricao}</Text>
+            <View style={{flexDirection:'row'}}>
+            <Text style={{fontSize:18}}>Categoria:</Text>
+            <Text style={styles.categoria}>{produto.nomeCategoria}</Text>
+            </View>
+            <View style={{flexDirection:'row'}}>
+            <Text style={{fontSize:18}}>Quantidade em estoque:</Text>
+            <Text style={styles.quantidade}>{produto.qtdEstoque}</Text>
+            </View>
             <Text style={styles.preco}>R$ {produto.valor},99</Text>
-            
+            <View style={botao.container}>
+        <Botao title="Adicionar ao carrinho" /> 
+        </View>
         </View>
           
         )}
-        <View style={botao.container}>
-        <Botao title="Adicionar ao carrinho" /> 
-        </View>
+        
       </View>
       </ScrollView>
     </View>
