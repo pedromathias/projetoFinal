@@ -13,6 +13,7 @@ import { FontAwesome5 } from "@expo/vector-icons";
 import { Cadastro } from "../screens/Cadastro";
 import { Produto } from "../screens/Produto";
 import { View, Text } from "react-native";
+import { Pedidos } from "../screens/Pedidos";
 
 const Tab = createBottomTabNavigator<RootTabParamList>();
 const Stack = createNativeStackNavigator<RootTabParamList>();
@@ -26,6 +27,8 @@ export type RootTabParamList = {
   Entrar: undefined;
   Produto: undefined;
   Inicio: undefined;
+  Pedidos: undefined;
+  User: undefined;
 };
 
 function Produtos() {
@@ -51,11 +54,20 @@ function Inicio() {
   );
 }
 
+function TelaPerfil() {
+  return (
+    <Stack.Navigator>
+      <Stack.Screen name= "Perfil" component={Perfil} options={{ headerShown: false }}/>
+      <Stack.Screen name= "Pedidos" component={Pedidos} options={{ headerShown: false }}/>
+    </Stack.Navigator>
+  );
+}
+
 function Logado() {
   return (
     <Tab.Screen
-      name="Perfil"
-      component={Perfil}
+      name="User"
+      component={TelaPerfil}
       options={{
         tabBarIcon: ({ color }) => {
           return <FontAwesome5 name="user-alt" size={24} color={color} />;
@@ -118,10 +130,10 @@ const TabNavigator = () => {
     <Tab.Navigator
       screenOptions={{
         headerShown: false,
-        tabBarActiveTintColor: "#ff0000",
-        tabBarInactiveTintColor: "#aaa",
-        tabBarInactiveBackgroundColor: "#000",
-        tabBarStyle: { backgroundColor: "#000", paddingBottom: 2 },
+        tabBarActiveTintColor: "#fff",
+        tabBarInactiveTintColor: "#868686",
+        tabBarInactiveBackgroundColor: "#1f1e25",
+        tabBarStyle: { backgroundColor: "#1f1e25", paddingBottom: 2 },
       }}
     >
         {Inicio()}

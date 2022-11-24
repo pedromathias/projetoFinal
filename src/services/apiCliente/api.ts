@@ -1,7 +1,7 @@
 import axios, { AxiosResponse } from "axios";
 
 export const postApiBulinha = axios.create({
-    baseURL:'https://7196-2804-d41-a72c-a900-5020-b4df-4701-a52f.sa.ngrok.io/'
+    baseURL:'https://540d-2804-d41-a7a1-cc00-c8aa-57e5-b91e-2c34.sa.ngrok.io/'
 });
 
 export interface InsereCliente {
