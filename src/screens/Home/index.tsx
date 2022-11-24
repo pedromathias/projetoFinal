@@ -17,6 +17,7 @@ export const Home = ({navigation}) => {
         setCarregando(true);
         getProdutos().then((res) => {
             setListaProdutos(res.data)
+            
         }).catch((err) => {
             console.log(err)
         }).finally(() => {
@@ -43,12 +44,12 @@ export const Home = ({navigation}) => {
                 :
                 <FlatList                
                     data={listaProdutos}
-                    keyExtractor={item => String(item.id)}
+                    keyExtractor={item => item.id.toString()}
                     numColumns={2}
                     renderItem={({ item }) => {
                         return (                            
                            <ProdutoCard
-                                onPress={navigation.navigate("Produto")}
+                           navigation={navigation}
                                 produto={item}
                                 setIdSelecionado={setIdSelecionado}
                                 setModal={setModal}
