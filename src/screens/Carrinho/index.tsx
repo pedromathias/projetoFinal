@@ -1,9 +1,10 @@
 import React, { useContext, useEffect, useState } from "react";
-import { View, Text, FlatList, ActivityIndicator } from 'react-native'
+import { View, Text, FlatList, ActivityIndicator, ViewComponent } from 'react-native'
 import { styles } from "./styles";
 import { CarrinhoContexto } from "../../Context/CarrinhoContexto";
 import { ProdutoCard } from "../../components/ProdutoCard";
 import { Botao } from "../../components/Botao";
+import { Octicons } from '@expo/vector-icons';
 
 
 export const Carrinho = () => {
@@ -22,9 +23,9 @@ export const Carrinho = () => {
         <View style={styles.container}>
             <Text style={styles.title}>LOLJA</Text>
             <View style={styles.content}>
-                <FlatList
+                {/* <FlatList
                     data={listaDeProdutos}
-                    keyExtractor={item => String(item.id)}
+                    keyExtractor={item => item.id.toString()}
                     renderItem={({ item }) => {
                         return (
                             <ProdutoCard
@@ -36,7 +37,7 @@ export const Carrinho = () => {
                         )
                     }
                     }
-                />
+                /> */}
                 <View style={styles.containerPreco}>
                     <Text style={styles.preco}>
                         Preço:
@@ -56,7 +57,10 @@ export const Carrinho = () => {
             } */}
             </View>
             <View style={styles.containerBotao}>
-                <Botao title="Fazer Pedido" />
+            <Botao title="Fazer Pedido"/>
+                <View style={styles.iconFazerPedido} >
+                    <Octicons name="check-circle-fill" size={24} color="black" />
+                </View>
             </View>
         </View>
     )

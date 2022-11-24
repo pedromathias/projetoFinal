@@ -22,13 +22,13 @@ export const styles = StyleSheet.create({
         marginBottom: 10,
         justifyContent: "space-between",
         flexDirection: 'row',
-        paddingHorizontal:10,
-        
+        paddingHorizontal:15,
+        marginTop:510
     },
 
     preco: {
         color: '#fff',
-        fontSize: 20,
+        fontSize: 30,
         fontWeight:'500'
     },
 
@@ -42,8 +42,13 @@ export const styles = StyleSheet.create({
     containerBotao: {
         width:'100%',
         marginTop:-15
+    },
 
+    iconFazerPedido: {
+        marginTop:-51,
+        marginLeft:22
+    },
+
+    containerCarrinho: {
     }
-
-
 })
