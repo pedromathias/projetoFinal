@@ -6,6 +6,7 @@ import PicaPau from "../../assets/images/Pica-Pau.jpg"
 
 import CloseIcon from "../../assets/icons/close_FILL0_wght400_GRAD0_opsz48.png";
 import { isTemplateExpression } from "typescript";
+import { Produto } from "../../screens/Produto";
 
 
 interface ProdutoCardProps extends TouchableOpacityProps {
@@ -13,16 +14,17 @@ interface ProdutoCardProps extends TouchableOpacityProps {
     setModal: React.Dispatch<React.SetStateAction<boolean>>;
     setIdSelecionado: React.Dispatch<React.SetStateAction<number>>;
     setPrecoSelecionado?: React.Dispatch<React.SetStateAction<number>>;
+    navigation:any;
 }
 
-export const ProdutoCard = ({ produto, setModal,setPrecoSelecionado, setIdSelecionado }: ProdutoCardProps) => {
+export const ProdutoCard = ({ produto, setModal,setPrecoSelecionado, setIdSelecionado, navigation}: ProdutoCardProps) => {
 
-    // const removeEquipamentoDoCarrinho = useContext(CarrinhoContexto).removeProdutoDoCarrinho
 
     function abreModal() {
         setIdSelecionado(produto.id);
         setPrecoSelecionado && setPrecoSelecionado(produto.valor)
         setModal(true);
+        navigation.navigate("Produto");
     }
 
     return (
