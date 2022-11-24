@@ -11,14 +11,6 @@ export const styles = StyleSheet.create({
 
     },
 
-    arrowback: {
-
-        position: 'absolute',
-        top: 50,
-        left: 10
-
-    },
-
     titulo: {
         fontSize: 40,
         marginTop: 5,
